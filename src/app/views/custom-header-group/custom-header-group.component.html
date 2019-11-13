@@ -1,0 +1,18 @@
+<div class="ag-header-group-cell-label">
+    <div class="ag-header-group-cell-label toolbar">
+        <mat-slide-toggle
+        class="example-margin"
+        [color]="colorToggle"
+        [checked]="false"
+        (click)="expandOrCollapse()">
+        Selection mode
+      </mat-slide-toggle>
+    </div>
+    <div class="ag-header-group-cell-label toolbar">
+      Total records: {{ $totalRows | async }}
+    </div>
+    <div class="ag-header-group-cell-label toolbar">
+      Selected records: {{ selectedRows }}
+    </div>
+  </div>
+  

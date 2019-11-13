@@ -1,0 +1,15 @@
+<div
+  *ngIf="params.menuIcon === 'fa-external-link-alt'"
+  (click)="onMainCheckBoxClick($event)"
+>
+  <div class="checkRow">
+    <input
+      class="purple_checkbox"
+      type="checkbox"
+      id="headerCheckbox"
+      [ngModel]="checked"
+      (click)="checkboxClick($event)"
+    />
+  </div>
+</div>
+<div class="customHeaderLabel">{{ params.displayName }}</div>
