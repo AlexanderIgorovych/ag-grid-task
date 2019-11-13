@@ -15,7 +15,7 @@ export class CustomRowCheckboxComponent implements OnInit, OnDestroy {
   public checked = false
 
   constructor(public cbService: CheckboxCommunicationService) {
-    this.cbService.$selectionObservable.subscribe(flag => {
+    this.selectionSubscription$ = this.cbService.$selectionObservable.subscribe(flag => {
       this.params.node.setSelected(flag)
       this.checked = flag
     })
